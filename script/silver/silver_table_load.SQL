@@ -93,7 +93,7 @@ BEGIN
 			REPLACE(SUBSTRING(prd_key, 1, 5), '-', '_') AS cat_id, -- Extract category ID
 			SUBSTRING(prd_key, 7, LEN(prd_key)) AS prd_key,        -- Extract product key
 			prd_nm,
-			ISNULL(prd_cost, 0) AS prd_cost,
+			ISNULL(prd_cost, 0) AS prd_cost, -- Replace NULL with 0
 			CASE 
 				WHEN UPPER(TRIM(prd_line)) = 'M' THEN 'Mountain'
 				WHEN UPPER(TRIM(prd_line)) = 'R' THEN 'Road'
