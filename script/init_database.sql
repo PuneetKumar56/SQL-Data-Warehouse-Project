@@ -27,7 +27,8 @@ GO
 -- Create the 'DataWarehouse' database
 CREATE DATABASE DataWarehouse;
 GO
-
+PRINT 'Database is successfully created'
+	
 USE DataWarehouse;
 GO
 
@@ -40,3 +41,4 @@ GO
 
 CREATE SCHEMA gold;
 GO
+PRINT 'Schemas are successfully created'
